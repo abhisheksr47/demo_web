@@ -10,7 +10,7 @@ After that
 3. Open your browser and go to :  http://localhost/project_name (Ensure index.html is present as the entry point)
 
 
-To Create Database Execute Below Script in MySQL Console in XAMP php : http://localhost/phpmyadmin/index.php?route=/server/sql
+To Create Database Execute Below Script in MySQL Console in XAMP MySQL : http://localhost/phpmyadmin/index.php?route=/server/sql
 
 -- Create the database
 CREATE DATABASE IF NOT EXISTS task_management;
