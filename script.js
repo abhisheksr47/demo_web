@@ -1,5 +1,5 @@
 function fetchTasks() {
-    fetch('tasks.php')
+    fetch('./backend/tasks.php')
         .then(response => response.json())
         .then(tasks => {
             const tasksDiv = document.getElementById('tasksList');
@@ -28,7 +28,7 @@ function addTask(event) {
         status: document.getElementById('status').value
     };
 
-    fetch('tasks.php', {
+    fetch('./backend/tasks.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -43,7 +43,7 @@ function addTask(event) {
 
 function deleteTask(id) {
     if (confirm('Delete this task?')) {
-        fetch(`tasks.php?id=${id}`, {
+        fetch(`./backend/tasks.php?id=${id}`, {
             method: 'DELETE'
         })
         .then(() => fetchTasks());
